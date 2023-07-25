@@ -35,6 +35,15 @@ class App extends Component {
       modalVisibility: false,
     })
   }
+
+  addFruit = (img, name, weight, price) => {
+    const { fruits } = this.state;
+
+    fruits.push({ img, weight, name, price })
+    this.setState({
+      fruits,
+    })
+  }
   
   render() {
     const { fruits } = this.state;
@@ -47,31 +56,33 @@ class App extends Component {
             <button className="btn btn-secondary ms-3" onClick={this.openModal}>New</button>
           </div>
           {
-            this.state.modalVisibility ? <FruitModal cancelModal={this.cancelModal} /> : ""
+            this.state.modalVisibility ? <FruitModal cancelModal={this.cancelModal} addFruit={this.addFruit} /> : ""
           }
-          {
-            fruits.map((item, index) => (
-              <div className="fruit-card" key={index}>
-                <div className="card__img">
-                  <img src={item.img} alt="img" />
-                </div>
-                <div className="title">
-                  <h3>{item.name}</h3>
-                </div>
-                <div className="weight-price">
-                  <div className="weight">
-                    <span className="badge rounded-pill text-bg-info">{item.weight} kg</span>
+          <div className="fruits-container">
+            {
+              fruits.length ? fruits.map((item, index) => (
+                <div className="fruit-card" key={index}>
+                  <div className="card__img">
+                    <img src={item.img} alt="img" />
                   </div>
-                  <div className="price">
-                    <span className="badge rounded-pill text-bg-danger">${item.price}</span>
+                  <div className="title">
+                    <h3>{item.name}</h3>
+                  </div>
+                  <div className="weight-price">
+                    <div className="weight">
+                      <span className="badge rounded-pill text-bg-info">{item.weight} kg</span>
+                    </div>
+                    <div className="price">
+                      <span className="badge rounded-pill text-bg-danger">${item.price}</span>
+                    </div>
+                  </div>
+                  <div className="remove" onClick={() => this.remove(index)}>
+                    <i className="bi bi-trash3"></i>
                   </div>
                 </div>
-                <div className="remove" onClick={() => this.remove(index)}>
-                  <i className="bi bi-trash3"></i>
-                </div>
-              </div>
-            ))
-          }
+              )) : <h5>No information found</h5>
+            }
+          </div>
         </div>
       </div>
     )
