@@ -1,0 +1,32 @@
+[
+  {
+    "img": "https://tiermaker.com/images/templates/the-most-basic-well-known-fruits-1374774/13747741638072987.jpeg",
+    "name": "Apple",
+    "weight": "3.2",
+    "price": "11.4"
+  },
+  {
+    "img": "https://img2.cgtrader.com/items/70823/345d9a9026/large/strawberry-3-3d-model-max-obj-fbx.png",
+    "name": "Strawberry",
+    "weight": "1.4",
+    "price": "20.0"
+  },
+  {
+    "img": "https://s3-sa-east-1.amazonaws.com/superimg/img.produtos/645162/645/img_500_1.png",
+    "name": "Orange",
+    "weight": "4.9",
+    "price": "58.1"
+  },
+  {
+    "img": "https://samozames.net/image/cache/catalog/flavor.west/peach-flavor-west-500x500.png",
+    "name": "Peach",
+    "weight": "3.5",
+    "price": "19.6"
+  },
+  {
+    "img": "http://safegarden.in/image/cache/data/watermelons-500x500.jpg",
+    "name": "Watermelon",
+    "weight": "15.7",
+    "price": "9.8"
+  }
+]
