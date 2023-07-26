@@ -30,9 +30,14 @@
   padding: 1rem 1.5rem;
   box-shadow: 0 4px 12px 2px rgb(227, 227, 227);
   border-radius: 1rem;
-  margin-top: .5rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
+}
+.fruit-card .left {
+  display: flex;
+  gap: 1rem;
+  transform: translateX(-30%);
 }
 .fruit-card .title {
   padding: .5rem;
@@ -48,7 +53,6 @@
 
 .card__img {
   width: 6rem;
-  transform: translateX(-50%);
   box-shadow: 0 4px 12px 2px rgb(227, 227, 227);
   background-color: #fff;
   border-radius: 1rem;
@@ -90,4 +94,29 @@
   width: 500px;
   height: 500px;
   border-radius: 1rem;
+  position: relative;
+}
+.add-fruit-container .inner-container .cancel {
+  display: flex;
+  justify-content: end;
+}
+.add-fruit-container .inner-container .cancel button {
+  background-color: #343434;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  border: none;
+  outline: none;
+  color: #fff;
+  transition: .25s;
+}
+.add-fruit-container .inner-container .cancel button:hover {
+  background-color: #000000;
 }

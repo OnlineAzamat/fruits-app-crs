@@ -62,11 +62,13 @@ class App extends Component {
             {
               fruits.length ? fruits.map((item, index) => (
                 <div className="fruit-card" key={index}>
-                  <div className="card__img">
-                    <img src={item.img} alt="img" />
-                  </div>
-                  <div className="title">
-                    <h3>{item.name}</h3>
+                  <div className="left">
+                    <div className="card__img">
+                      <img src={item.img} alt="img" />
+                    </div>
+                    <div className="title">
+                      <h3>{item.name}</h3>
+                    </div>
                   </div>
                   <div className="weight-price">
                     <div className="weight">

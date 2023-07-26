@@ -29,19 +29,24 @@ export default class FruitModal extends Component {
     return (
       <div className='add-fruit-container'>
         <div className="inner-container">
+          <div className="cancel">
+            <button onClick={this.cancelModal}>
+              <i className="bi bi-x-lg"></i>
+            </button>
+          </div>
           <div className="title">
             <h3>Add fruit</h3>
           </div>
           <div className="input-group has-validation">
             <span className="input-group-text"><i className="bi bi-link-45deg"></i></span>
             <div className="form-floating is-invalid">
-              <input type="text" className="form-control is-invalid" id="floatingInputGroup2" placeholder="Fruit" ref={this.imgUrlRef} required />
-              <label htmlFor="floatingInputGroup2">Image url</label>
+              <input type="text" className="form-control" id="floatingInputGroup1" placeholder="Fruit" ref={this.imgUrlRef} required />
+              <label htmlFor="floatingInputGroup1">Image url</label>
             </div>
           </div>
           <div className="input-group has-validation">
             <div className="form-floating is-invalid">
-              <input type="text" className="form-control is-invalid" id="floatingInputGroup2" placeholder="Fruit name" ref={this.nameRef} required />
+              <input type="text" className="form-control" id="floatingInputGroup2" placeholder="Fruit name" ref={this.nameRef} required />
               <label htmlFor="floatingInputGroup2">Fruit name</label>
             </div>
           </div>
@@ -49,8 +54,7 @@ export default class FruitModal extends Component {
             <input type="number" className="form-control" placeholder="Weight (kg)" ref={this.weightRef} />
             <input type="number" className="form-control" placeholder="Price ($)" ref={this.priceRef} />
           </div>
-          <div className="btn-group-vertical" role="group" aria-label="Vertical button group">
-            <button type="button" className="btn btn-danger" onClick={this.cancelModal}>Cancel</button>
+          <div className="d-f align-items-end justify-content-end">
             <button type="button" className="btn btn-warning" onClick={this.addFruit}>Save changes</button>
           </div>
         </div>
